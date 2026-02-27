@@ -1,0 +1,179 @@
+🔹 STEP 1: Open Excel
+
+Open Microsoft Excel
+
+Go to Data Tab
+
+🔹 STEP 2: Connect to SQL Server
+
+Click: 
+
+Data → Get Data
+
+Select:
+
+From Database → From SQL Server Database
+
+Enter:
+
+Server Name → localhost\SQLEXPRESS
+
+Click OK
+
+🔹 STEP 3: Select Table
+
+Navigator window opens
+
+Expand:
+
+AdventureWorksDW
+
+Select:
+
+DimProduct
+
+Click Load
+
+Data appears in Excel as a formatted table.
+
+🔹 STEP 4: Create Pivot Table
+
+Click anywhere inside the loaded table
+
+Go to:
+
+Insert → Pivot Table
+
+Select:
+
+From Table/Range
+
+Click OK
+
+Pivot Table Field panel appears on right side.
+
+🔹 STEP 5: Drag Fields
+
+Since we imported DimProduct, do this:
+
+Drag Color → Rows
+
+Drag EnglishProductName → Values
+
+Excel shows:
+
+Count of EnglishProductName
+
+This means:
+Number of products per color.
+
+🔹 STEP 6: Create Pivot Chart
+
+Click inside Pivot Table
+
+Go to:
+
+Insert → Pivot Chart
+
+Choose:
+
+Pie Chart (If journal says Pie)
+
+Click OK
+
+
+✔ PART A COMPLETED
+
+
+
+
+🔷 PART B
+
+Import Data from Excel File & Create Pivot Table + Chart
+🔹 STEP 1: Import Excel File
+
+Go to:
+
+Data → Get Data
+
+Select:
+
+From File → From Workbook
+
+Select:
+
+Online-Store-Orders.xlsx
+
+Click Import
+
+Navigator window opens
+
+Select sheet:
+
+Online-Store-Orders
+
+Click Load
+
+Data appears as table.
+
+🔹 If File Not Provided in Exam
+
+Create sample data:
+
+Product	Quantity	UnitPrice
+Laptop	5	50000
+Mobile	10	20000
+Headphones	15	2000
+Laptop	3	50000
+Mobile	7	20000
+
+Select data → Press Ctrl + T → Convert to Table
+
+Then continue normally.
+
+🔹 STEP 2: Create Pivot Table
+
+Click inside data table
+
+Go to:
+
+Insert → Pivot Table
+
+Choose:
+
+From Table/Range
+
+Click OK
+
+🔹 STEP 3: Drag Fields
+
+As per journal:
+
+Product → Rows
+
+Quantity → Values (Sum)
+
+UnitPrice → Values
+
+⚠ Important:
+Right-click UnitPrice → Value Field Settings → Choose:
+
+Average (Recommended)
+OR
+
+Sum (If journal strictly says Sum)
+
+🔹 STEP 4: Create Pivot Chart
+
+Click inside Pivot Table
+
+Insert → Pivot Chart
+
+Choose:
+
+Column Chart (Best for comparison)
+
+Click OK
+
+
+✔ PART B COMPLETED

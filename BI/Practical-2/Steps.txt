@@ -1,0 +1,146 @@
+STEP 1: Import Data from OData
+
+Open Power BI Desktop
+
+Click Get Data
+
+Select:
+
+OData Feed
+
+Enter URL:
+
+http://services.odata.org/V3/Northwind/Northwind.svc/
+
+Click OK
+
+If prompted → Choose Anonymous → Connect
+
+🔹 STEP 2: Select Tables
+
+Navigator window appears.
+
+Select:
+
+Products
+
+Orders
+
+Click Load
+
+Data will load into Power BI.
+
+🔹 STEP 3: Transform Products Table
+
+Click Transform Data (opens Power Query Editor)
+
+Select Products table
+
+Click Choose Columns
+
+Select only:
+
+ProductID
+
+ProductName
+
+QuantityPerUnit
+
+UnitsInStock
+
+Click OK
+
+🔹 Change Data Type
+
+Select UnitsInStock
+
+Change Data Type:
+
+Decimal Number → Whole Number
+🔹 STEP 4: Expand Order Details in Orders Table
+
+Select Orders table
+
+Find column:
+
+Order_Details
+
+Click the Expand (↔) icon
+
+Uncheck:
+
+Select All Columns
+
+Select only:
+
+ProductID
+
+UnitPrice
+
+Quantity
+
+Click OK
+
+Now Order_Details splits into 3 columns:
+
+Order_Details.ProductID
+
+Order_Details.UnitPrice
+
+Order_Details.Quantity
+
+🔹 STEP 5: Create Custom Column (LineTotal)
+
+Go to:
+
+Add Column → Custom Column
+
+Name:
+
+LineTotal
+
+Enter formula:
+
+[Order_Details.UnitPrice] * [Order_Details.Quantity]
+
+Click OK
+
+This calculates total sales per order row.
+
+🔹 STEP 6: Clean Column Names
+
+Drag LineTotal column next to ShipCountry (optional formatting step)
+
+Rename columns by removing prefix:
+
+Change:
+
+Order_Details.ProductID → ProductID
+Order_Details.UnitPrice → UnitPrice
+Order_Details.Quantity → Quantity
+
+(Just double-click header and remove prefix text)
+
+🔹 STEP 7: Close & Apply
+
+Click:
+
+Close & Apply
+
+Power BI loads transformed data into model.
+
+🔹 STEP 8: Create Relationship
+
+Click Model View (Relationship icon on left)
+
+Connect:
+
+Products[ProductID]
+         ↓
+Orders[ProductID]
+
+Relationship Type:
+
+One-to-Many
+
+Products → Orders

@@ -1,0 +1,106 @@
+http://services.odata.org/V3/Northwind/Northwind.svc/
+
+
+🔹 STEP 1: Open Power BI Desktop
+
+Click Start
+
+Open Power BI Desktop
+
+Wait until Home screen appears
+
+🔹 STEP 2: Import Data from OData Feed
+
+Click:
+
+Home → Get Data
+
+Select:
+
+OData Feed
+
+Click Connect
+
+🔹 STEP 3: Enter OData URL
+
+Paste this URL:
+
+http://services.odata.org/V3/Northwind/Northwind.svc/
+
+Click OK
+
+If authentication window appears:
+
+Choose Anonymous
+
+Click Connect
+
+🔹 STEP 4: Select Table
+
+Navigator window opens.
+
+Select:
+
+Products
+
+Click:
+
+Transform Data
+
+This opens Power Query Editor.
+
+🔹 STEP 5: Choose Required Columns
+
+Inside Power Query:
+
+Click:
+
+Home → Choose Columns
+
+Select only:
+
+ProductID
+
+ProductName
+
+QuantityPerUnit
+
+UnitsInStock
+
+Click OK
+
+All unwanted columns are removed.
+
+🔹 STEP 6: Correct Data Type
+
+Select UnitsInStock
+
+Change Data Type to:
+
+Whole Number
+
+(If already correct, no need to change.)
+
+🔹 STEP 7: Close & Apply
+
+Click:
+
+Close & Apply
+
+Data loads into Power BI.
+
+🔹 STEP 8: Create Report Visualization
+
+Now you are in Report View.
+
+From Visualizations pane, select:
+
+Clustered Column Chart
+
+Drag:
+
+ProductName → Axis
+
+UnitsInStock → Values
+
+This shows stock quantity per product.
